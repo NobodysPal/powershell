@@ -8,7 +8,7 @@
             ValueFromPipelineByPropertyName=$true)
         ]            
     [string]$computer=".",
-    [string]$domain="WORKGROUP" #set theis to your domain or workgroup to check for             
+    [string]$domain="WORKGROUP" #set this to your domain or workgroup to check for             
     )
                  
     BEGIN{
