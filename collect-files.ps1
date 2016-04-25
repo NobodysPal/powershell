@@ -4,10 +4,10 @@
   Collects files and provides file hashes based on criteria.
 
 .DESCRIPTION
-  This module will collect all the files in a given directory, recursive is an option, and will provide the option to has the files.
+  This module will collect all the files in a given directory, recursive is an option, and will provide the option to hash the files.
 
 .TODO
-  (1) Manage large file hashing memore utilization
+  (1) Manage large file hashing memory utilization
   (2) Enable PSRemoting
   (3) Comparison to whitlist
   (4) Comparison across multiple machines
