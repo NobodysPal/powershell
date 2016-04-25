@@ -1,4 +1,4 @@
-#requires -version 2
+#requires -version 4
 <#
 .SYNOPSIS
   Collects files and provides file hashes based on criteria.
