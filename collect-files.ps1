@@ -1,3 +1,45 @@
+#requires -version 2
+<#
+.SYNOPSIS
+  Collects files and provides file hashes based on criteria.
+
+.DESCRIPTION
+  This module will collect all the files in a given directory, recursive is an option, and will provide the option to has the files.
+
+.TODO
+  (1) Manage large file hashing memore utilization
+  (2) Enable PSRemoting
+  (3) Comparison to whitlist
+  (4) Comparison across multiple machines
+  (5) Identify files of interest
+  
+.NOTES
+  Version:        1.0
+  Author:         Jeff Pierdomenico
+  Creation Date:  24 April 2016
+  Purpose/Change: Initial script development
+
+#>
+
+#---------------------------------------------------------[Initialisations]--------------------------------------------------------
+
+#Set Default Error Action
+$ErrorActionPreference = 'Stop'
+
+#Import PSLogging Module
+#Import-Module PSLogging
+
+#----------------------------------------------------------[Declarations]----------------------------------------------------------
+
+#Script Version
+$sScriptVersion = '1.0'
+
+#Log File Info
+#$sLogPath = 'C:\Windows\Temp'
+#$sLogName = '<script_name>.log'
+#$sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
+
+#-----------------------------------------------------------[Functions]------------------------------------------------------------
 ﻿function Collect-Files{             
     [CmdletBinding()]             
     param (             
@@ -9,7 +51,7 @@
         ]            
         [string]$path=".",
         [switch]$recursive=$false,
-        [string]$outfile="C:\Users\Jeff\Desktop\files.txt"     
+        [string]$outfile="$env:userprofile\Desktop\files.txt"     
     )
                  
     BEGIN{
