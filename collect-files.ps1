@@ -40,7 +40,7 @@ $sScriptVersion = '1.0'
 #$sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
-﻿function Collect-Files{             
+function Collect-Files{             
     [CmdletBinding()]             
     param (             
         [parameter(
@@ -57,9 +57,9 @@ $sScriptVersion = '1.0'
     BEGIN{
         Clear-Host
         function Error-Collection($error){
-            write-Host “[!] Caught an exception” -ForegroundColor Red
-            write-Host “[!] Exception Type: $($_.Exception.GetType().FullName)” -ForegroundColor Red
-            write-Host “[!] Exception Message: $($_.Exception.Message)” -ForegroundColor Red
+            write-Host "[!] Caught an exception"� -ForegroundColor Red
+            write-Host "[!] Exception Type: $($_.Exception.GetType().FullName)"� -ForegroundColor Red
+            write-Host "[!] Exception Message: $($_.Exception.Message)"� -ForegroundColor Red
             Break
         }
 
@@ -74,13 +74,13 @@ $sScriptVersion = '1.0'
                     else{
                         Get-FileHash -Algorithm MD5 $file -ErrorAction SilentlyContinue | Out-Null
                     }
-                    Write-Progress -Activity “Hashing all the files. $progress remaining” -status “Hashing file: $file” -percentComplete ($files.IndexOf($file) / $files.count*100)
+                    Write-Progress -Activity "Hashing all the files. $progress remaining"� -status "Hashing file: $file"� -percentComplete ($files.IndexOf($file) / $files.count*100)
                 }
             }
             Catch [Exception]{
                 Error-Collection($_.Exception)
             }
-            Write-Progress -Activity “Hashing all the files” -status “All Done” -PercentComplete 100
+            Write-Progress -Activity "Hashing all the files"� -status "All Done"� -PercentComplete 100
             Start-Sleep -Seconds 3
         }
 
