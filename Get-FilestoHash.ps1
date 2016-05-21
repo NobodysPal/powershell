@@ -39,7 +39,7 @@ $sScriptVersion = '1.0'
 #$sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
-function Collect-Files{             
+function Get-FilestoHash{             
     [CmdletBinding()]             
     param (             
         [parameter(
