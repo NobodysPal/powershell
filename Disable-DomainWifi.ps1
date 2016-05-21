@@ -23,7 +23,7 @@
   Purpose/Change: Initial script development
 
 .EXAMPLE
-  domain-wifi-disable -computer MyComputer -domain HomeDomain
+  Disable-DomainWifi -computer MyComputer -domain HomeDomain
 
   This example will check if MyComputer is connected to HomeDomain and if it is, will disable the Wi-Fi adapter. 
 #>
@@ -49,7 +49,7 @@ $sScriptVersion = '1.0'
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
 
 
-function domain-wifi-disable{             
+function Disable-DomainWifi{             
     [CmdletBinding()]             
     param (             
         [parameter(
