@@ -66,11 +66,10 @@ Function Get-HuntFile {
         Name = $Null
         Extension = $Null
         }
-    $output
+    $output = $NUll
     
     # Sets up the output directory
     $outputpath = $(Split-Path -Path $PSCommandPath) + "\output"
-    Test-Path -Path $outputpath
     Try {    
         If (Test-Path -Path $outputpath){
             Write-Verbose "[i] Output path okay."
