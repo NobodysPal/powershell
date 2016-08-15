@@ -52,6 +52,8 @@ Function Get-WeatherBot {
         HeatIndex = $null
         Forecast = $null
         }
+    
+    # For those who verbose
     if($verbose) {
         $VerbosePreference="Continue"
     }
